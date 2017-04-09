@@ -1,0 +1,9 @@
+
+if has("syntax")
+ syntax on
+ endif
+
+ set statusline=\ %<%l:%v\ [%P]%=%a\ %h%m%r\ %F\
+
+ :colorscheme basic-dark
+

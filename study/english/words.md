@@ -1,0 +1,4 @@
+- stray : 제 위치를 벗어나다
+- clutter : 채우다  
+- auxiliary : 보조의  
+- 
