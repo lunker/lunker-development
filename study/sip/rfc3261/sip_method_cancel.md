@@ -6,15 +6,16 @@
 - INVITE의 경우, invite에 대해서 cancel을 보내면 ringing을 멈추고, invite에 대해서 487 error response를 발행한다.????
 ---
 
-#### client behavior(section 9.1)
+## client behavior(section 9.1)
 - INVITE에 대해서만 사용하도록 한다. 다른 method들은 반응이 즉시 일어나기 때문에, cancel의 사용은 race condition을 만들게 된다.  
 - CANCEL request의 header는 취소할 기존 request의 header field(request-uri, call-id, to, cseq, from)가 동일해야 한다.  
 - CANCEL request를 생성한다.
 - provisional response가 도착하지 않았으면,CANCEL REQUEST를 보내지 않고 기다린다.  
 - 만약 초기 request에 대한 응답을 64*T1의 시간동안 받지 못한다면, 초기 request는 취소된것으로 간주하고 transaction을 처리한다.
+- 초기 request에 Record-Route header가 있었다면, CANCEL에도 동일한 값으로 Record-Route가 있어야한다.
 ---
 
-#### server behavior  
+## 9.2 server behavior  
 - UAS가 cancel에 대해 해당되는 request를 찾지 못하면, 481 error response 반환.  
 - 해당되는 request가 존재하면, final response의 발행 여부에 따라 달라진다.  
   아직 response를 발행하지 않았으면, 해당 request를 cancel한다.  

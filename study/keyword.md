@@ -1,5 +1,5 @@
-찾아볼 키워드들
-===============
+# 찾아볼 키워드들
+
 **통신**  
 
 -	FQDN(Fully Qualified domain name)
@@ -34,13 +34,13 @@
 - CDR (Call Detail Records)  
 - rfc 5863 + session border controller
 - call stateful
+---
 
-=======
 - sip trunk ?
 - redirect server  
 
-꼭 봐야 할 부분들
-=================
+# 꼭 봐야 할 부분들
+
 -	RFC3261
 -	sdp
 -	ringback tone은 나중에 구현할 것.
@@ -65,8 +65,14 @@
 ### Java 8
 - method reference
 - lambda
-
 ---  
 
 ### Spring  
 - Web.xml의 구성 및 기능  
+
+
+### General   
+- 병렬 프로그래밍
+- pattern, gof pattern,
+- 객체지향 5원칙(solid)
+- 멀티 스레드, 멀티 코어 프로그래밍..!
