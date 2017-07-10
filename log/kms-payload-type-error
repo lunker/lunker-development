@@ -1,0 +1,32 @@
+2017-06-15 15:51:30,794407 31511 [0x00007f541d7fa700]   debug GST_CAPS                  gstpad.c:3163 gst_pad_query_caps_default() <rtpopusdepay0:sink>  using caps 0x7f53fc019b70 application/x-rtp, media=(string)audio, payload=(int)[ 96, 127 ], clock-rate=(int)48000, encoding-name=(string){ OPUS, X-GST-OPUS-DR       AFT-SPITTKA-00 } with filter 0x7f5430002f70 application/x-rtp, media=(string)audio, payload=(int)111, clock-rate=(int)48000, encoding-name=(string)OPUS, minptime=(string)10, useinbandfec=(string)1
+
+위에ㅐ꺼랑
+
+2017-06-15 15:51:29,754947 31511 [0x00007f5471958700]   debug GST_CAPS                  gstpad.c:3169 gst_pad_query_caps_default() <rtpopuspay0:src>  using caps 0x7f545c       0c8720 application/x-rtp, media=(string)audio, payload=(int)[ 96, 127 ], clock-rate=(int)48000, encoding-params=(string)2, encoding-name=(string){ OPUS, X-GST-OPUS-DRAFT       -SPITTKA-00 }
+
+다름.
+--------------
+
+
+2017-06-15 15:51:29,843672 31511 [0x00007f5471958700]   debug GST_CAPS                  gstutils.c:2847 gst_pad_query_caps() <rtpopuspay1:src>  query returned applicatio       n/x-rtp, media=(string)audio, payload=(int)[ 96, 127 ], clock-rate=(int)48000, encoding-params=(string)2, encoding-name=(string){ OPUS, X-GST-OPUS-DRAFT-SPITTKA-00 }
+
+
+2017-06-15 15:51:30,794447 31511 [0x00007f541d7fa700]   debug GST_CAPS                  gstpad.c:3166 gst_pad_query_caps_default() <rtpopusdepay0:sink>  result 0x7f53fc01c370 application/x-rtp, media=(string)audio, payload=(int)111, clock-rate=(int)48000, encoding-name=(string)OPUS, minptime=(string)10, useinb       andfec=(string)1
+
+
+
+2017-06-15 15:51:30,789100 31511 [0x00007f541d7fa700]   debug GST_CAPS                  gstpad.c:2215 gst_pad_link_check_compatible_unlocked() <rtpopusdepay0:sink>  sink caps application/x-rtp, media=(string)audio, payload=(int)[ 96, 127 ], clock-rate=(int)48000, encoding-name=(string){ OPUS, X-GST-OPUS-DRAFT-       SPITTKA-00 }
+
+
+
+gstrtpsession.c:1642 gst_rtp_session_clock_rate() <rtpsession0>  No clock-rate in caps!
+
+
+2017-06-15 16:14:50,533456 32488 [0x00007fa562ffd700]   debug rtpjitterbuffer           gstrtpjitterbuffer.c:1294 gst_jitter_buffer_sink_parse_caps() <rtpjitterbuffer0>  got seqnum-base 27882
+=> 여기에서 -1 이 나오더라...
+
+
+11517 2017-06-15 15:51:29,862410 31511 [0x00007f5440b7b700]   debug rtpsession                rtpsession.c:1402 source_clock_rate()  got clock-rate -1 for pt 96
+
+
+====

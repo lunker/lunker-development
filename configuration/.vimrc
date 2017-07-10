@@ -17,6 +17,3 @@ set paste
 
 set ignorecase
 set smartcase
-
-~
-~

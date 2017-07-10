@@ -1,0 +1,12 @@
+-
+release
+release
+release
+
+client destroy
+
+- client.destroy() => method:"closeSession"을 수행한다.
+  - MediaSet::releaseSession() 수행 : "참조를 삭제. destructor 호출!"
+  
+- 그러고 나중에 proxy에서 kurento client를 없애면(socket이 끊어지면) WebsocketTransport::closeHandler()가 호출된다!
+  - WebsocketTransport::closeHandler() :
