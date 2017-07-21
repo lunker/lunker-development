@@ -6,10 +6,12 @@ if has("syntax")
 set statusline=\ %<%l:%v\ [%P]%=%a\ %h%m%r\ %F\
 
 
-
  au BufReadPost *
  \ if line("'\"") > 0 && line("'\"") <= line("$") |
  \ exe "norm g`\"" |
  \ endif
 
  :colorscheme basic-dark
+
+
+https://github.com/zcodes/vim-colors-basic/blob/master/colors/basic-dark.vim
