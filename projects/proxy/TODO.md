@@ -19,9 +19,13 @@
 - homer5를 위한 logging 모듈화
 - 세종 연동 테스트 코드 '07079999800' 관련 코드 삭제
 - test case, test code 작성
+- ParticipantAgent 등 안쓰이는 코드 및 로직 정리
+
+- update처리시에, 180 ringing이 와야 update를 처리하고 있다. 하지만, rfc에는 180이 아니라 offer/answer를 기준으로 하기에 이를 바꿔야함.
+- sip request 처리시에 기본적으로 필요한것들을 공통적으로 처리하는 전처리 모듈을 따로 개발.
+- Constants에 HISTORY_STATUS_ONE... 이게 뭐니 
 
 =====================================
-
 <proxy_registrar>
 
 - java swagger -> rest api 문서화
@@ -39,4 +43,5 @@
   ->
 
 - 매번 invite때마다 device list를 가져오기 위해서 rest를 요청하는데, 이를 varnish cache를 이용해서 빠르게 하기.
--
+- rest call 이후 response를 받은 다음에 condition을 바꾸지 않고 미리 바꾼다.
+- 하드코딩 싹다 정리

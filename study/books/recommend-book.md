@@ -40,6 +40,9 @@ Windows 시스템 프로그래밍 제4판 / Johnson M. Hart저 류광 역 / 정�
 Refactoring / John Brant 저, 윤성준 역 / 한빛미디어
 
 
+## Architecture
+- Pattern-Oriented Software Architecture Volume 1: A System of Patterns
+- 
 
 
 ## 참고 링크   

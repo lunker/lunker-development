@@ -1,6 +1,14 @@
 # Call Flow for ims (scf & proxy_registrar)
 
 [Send INVITE]
+- call stack : SCFServlet->SCFBeanContainer->communicationImpl->Conversation->caller, callee->ParticipantAgent
+
+
+- <CommunicationImpl>
+  # void __runStateMachine(SipServletMessage msg, Participant sender, Participant recepient, OperationInput i) ::
+  - INVITE 처리를 하기전에, inboundcall, outboundcall, typhone call인지 type 및 정보를 셋팅한다.
+  - inbound call에서 callee가 전화번호로 들어오기 때문에, typhone 계정으로 바꿔주는 작업을 한다.
+
 - <Conversation>
   # __initial(InviteInput i) ::
 
@@ -41,15 +49,12 @@
     - 통화중 여부 확인
     - <rest> call-histroy 추가
 
-
-
 - <ParticipantAgent>
   # ForwardRequest ::
     - if) initial request
       - sip request를 위해서 관련 정보들을 SipSession에 저장한다.
       - lb에서 남겨준 header정보와 sip request header 정보들을 이용하여 sipsession에 저장한다.
         - client port, client ip가 via에 receved, rport로 기재되어 있지 않으면, lb에서 남겨준 custom header로 이를 대체한다.
-        -
       - changeRedisInfo(fromCaller); // 새로운 메세지가 올때마다 레디스를 엎어친다.. ㅡㅡ ;
 
 =============================================================================== 여기까지가 Invite & 180 Rining 처리 로직.
@@ -57,7 +62,7 @@
 [Receive 180 RINGING]
 
 - <ParticipantAgent>
-  # ForwardResponse ::
+  # ForwardResponse() ::
 
   if) inbound Call || typhone call
     if) 180 RINGING
@@ -68,6 +73,48 @@
     - info에 대한 200ok는 먹어버린다.
 
   if) kms rtp disconnected 이후에 들어오는 response에 대해서는 먹어버린다.
+
+  if) 180 RINGING
+    - ringing을 받은 시간을 기록한다.
+    - 그전에 쌓여있는 request가 있다면, 180 ringing 대신에 이것들을 전송한다.
+    - 쌓인 request에는 update, cancel이 있다.
+
+  if) 180ringing && ringback이 필요하다면,
+    - doRingback()을 통해 ringbacktone을 재생시킨다.
+
+  if) 180ringing && ringback이 필요 없다면,
+    - 이미 caller에게 180 ringing을 proxy가 만들어서 전송해줬기 때문에, 해당 180 response(from callee)를 전달하지 않고 먹어버린다.
+
+[Receive 200 OK + Initial Request]
+- <ParticipantAgent>
+  # ForwardResponse ::
+  - 200ok를 보낸 callee의 정보를 active session으로 설정한다.
+  - 나머지 device들에 cancel을 보낸다.
+  - caller, callee의 device 정보에 따라서 생성된 Kurento Endpoint들을 해제시키거나 연결시킨다.
+
+[Receive 4xx, 6xx, responses]  => logic 요상함
+- if) 600이상
+  - stop pushHelper timer
+  - call history를 위해 디바이스 정보를 저장해둔다.
+  - 다른 device들에 Constants.CANCEL_PUSH_OTHER_DEVICE_REJECT을 보낸다.
+  - release kurento
+- if) 408
+  - stop pushHelper timer
+  - 다른 device들에 Constants.CANCEL_PUSH_CALLER_CANCEL를 보낸다.
+  - release kurento
+- if) 나머지
+  - 다른 device들에 Constants.CANCEL_PUSH_OTHER_DEVICE_REJECT을 보낸다.
+
+[Receive 183 session progress]
+- 183 session progress에 있는 sdp를 이용해서 kurento media server endpoint를 만들고 진행시킨다.
+
+[Receive 200 OK + Subsequent Request]
+- re-INVITE 케이스이므로, 바뀐 sdp 정보를 바꾸어야한다.
+- active callee session을 변경
+- redis info 변경
+
+if) media server를 이용중이면,
+  - 기존 kurento endpoint들을 다시 생성해서 연결시킨다.
 
 
 ## 정리

@@ -1,12 +1,7 @@
 # Bye 시나리오
 
-
 - Bye stack :
   - SCFServlet -> SCFBeanContainer -> CommunicationImpl -> Conversation ->
-
-
-
-
 
 
 <Conversation>
@@ -14,8 +9,6 @@
   # __ending(SuccessResponseInput i) ::
 
   - Invoke <CallBean> CommunicationEvent.Type.FINISHED
-
-
 
 
 
