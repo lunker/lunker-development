@@ -9,7 +9,6 @@ basertpendpoint 에서 max_port, min_port를 property로 가진다.
 
 @ nice_agent_set_port_range
 -> agent에 있는 해당 stream에 여러개의 component가 존재한다.
-
 -> component의 'min_port', 'max_port'를 셋팅한다.
 
 @ nice_agent_gather_candidates
@@ -40,4 +39,52 @@ discovery_add_local_host_candidate :: candidate 생성 부분
 g_object_set ()을 통해 property 'session-clustering-mode', 'vip','rip' property set
 
 - get vip, rip from config file
+
+=================================================================================================
+
+
+
+
+
+# rtpendpoint vip, rip 개발
+
+- <kmsrtpendpoint.c>에서 nice_interfaces_get_local_ips을 통해서 sdp에 들어가는 host ip를 정한다.
+- <kms-core> <kmssdpagent>에서 create_offer, create_answer 등에서 kms_sdp_agent_origin_init 여기에서 rtpendpoint의 sdp에 들어가는 address를 정한다. (origin과 connection 등)
+=> kmssdpagent의 agent->priv->addr을 private ip, real ip로 설정해야한다.
+
+- kms의 conf를 이용하여 value를 셋팅하려면, BaseRtpendpointImpl -> kmsbasertpendpoint로 property를 넘겨야한다.
+
+
 -
+[kms-core]
+-
+  <kmsbasesdpendpoint> kms_sdp_session_set_addr ->
+  <kmssdpsession> set kmssdpagent's property 'addr'
+
+->
+kmssdpagent의 addr을 이용해서 sdp를 생성....?
+
+
+# <RtpEndpoint> vip, rip 작업 flow
+1) add key-value 'real_ip', 'virtual_ip'
+2) read config value in 'BaseRtpendpointImpl'
+3) create property in 'kmsbasertpendpoint'
+4) add new variable 'real_ip' & 'virtual_ip' in kmsbasertpendpointprivate
+5) pass it to
+
+
+##### 수정
+SdpEndpointImpl에다가 작업해야할듯
+
+=======================
+
+
+
+[kms-elements] kmsrtpendpoint의 kms_rtp_endpoint_set_addr()에서 local interface를 긁어오고(libnice api 사용), 여기에서 ip를 가져와서 kmsbasesdpendpoint에 셋팅한다.
+[kms-core] kmsbasesdpendpoint의 self->priv->addr에 local ip가 들어있다.
+->
+
+### Summary
+RtpEndpoint는 현재 binding socket address가 any(0.0.0.0)이므로, vip로 socket을 생성해줄 필요가 없다.
+sdp 생성에 쓰이는 ip address는 local interface에서 긁어와서 사용한다.
+긁어올때 rip로 긁어오도록 하면 vip-rip 구현완료.
