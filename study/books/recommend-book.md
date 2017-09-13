@@ -39,11 +39,44 @@ Windows 시스템 프로그래밍 제4판 / Johnson M. Hart저 류광 역 / 정�
 
 Refactoring / John Brant 저, 윤성준 역 / 한빛미디어
 
+## General
+- 소프트웨어 장인
+- 실용주의 프로그래머
+- 생각하는 프로그래밍
+- code complete2
+- clean code
+- 프로그래밍 수련법 ( the practice of programming )
+- 피플 웨어 (peopleware)
+- 맨먼스 미신 (man-month mythical)
+- test driven development
+- 읽기 좋은 코드가 좋은 코드다
+- 소프트 스킬
+- 나는 프로그래머다
+- 조엘 온 소프트웨어
+- 프로그래밍 패턴 : 프로그램을 작성하는 33가지 방법
+- J2EE Design and Development(2002), Rod Johnson
+J2EE 설계와 개발, 정보문화사
 
 ## Architecture
 - Pattern-Oriented Software Architecture Volume 1: A System of Patterns
-- 
+- 엔터프라이즈 애플리케이션 아키텍쳐 패턴
+
+## Java
+- 토비의 스프링 3.1
+- effective java2
+- 네이버를 만든 기술, 자바편
+- 소프트웨어 품질관리 (nhn은 이렇게한다)
+- java8 in action
+
+
+## Algorithm
+-
+
+## 함수형 프로그래밍
+-
+
 
 
 ## 참고 링크   
--http://pr0gr4m.tistory.com/2
+- http://pr0gr4m.tistory.com/2
+- https://m.blog.naver.com/PostView.nhn?blogId=kkpa1002&logNo=20116446240&proxyReferer=https%3A%2F%2Fwww.google.co.kr%2F
