@@ -6,16 +6,29 @@
 - proxy_registrar의 용도 및 scf(sip)과의 관계, 역할 명확히
 
 - scf관련 aop (logging) 적용 검토
-- gradle화 & 관련 lib들 소스 있나 확인 => 있음. 소스 따서 커스텀화
+
+- gradle화 & 관련 lib들 소스 있나 확인
+
 - 하드코딩(key, name, 등등등) 걷어내기
+
 - project내부에 있는 lib 폴더를 tomcat에서 사용하도록 변경
+
 - statemachine ?
+
 - invite를 날릴때마다 OPMD로 인하여 스레드 생성 -> 스레드 풀 사용으로 변경
+
 - changeRedisInfo()-> sip request가 들어올때마다 registration 정보를 엎어친다...;
+
+doRequest
 - communicationsessionutil, sipapplicationsessionutil 사용 안하고 소스 바꾸도록.
-- register 된 device list를 local에서 사용하지 않고, rest를 통해서 매번 가져오는거 같다...?
+
+
+// - register 된 device list를 local에서 사용하지 않고, rest를 통해서 매번 가져오는거 같다...?
+
 - SIP Message에서 필요한 부분 가져오는 parser 따로 필요할듯.
+
 - SIP Message send하는 method 및 클래스 하나로 통합.
+
 - homer5를 위한 logging 모듈화
 - 세종 연동 테스트 코드 '07079999800' 관련 코드 삭제
 - test case, test code 작성
@@ -23,7 +36,14 @@
 
 - update처리시에, 180 ringing이 와야 update를 처리하고 있다. 하지만, rfc에는 180이 아니라 offer/answer를 기준으로 하기에 이를 바꿔야함.
 - sip request 처리시에 기본적으로 필요한것들을 공통적으로 처리하는 전처리 모듈을 따로 개발.
-- Constants에 HISTORY_STATUS_ONE... 이게 뭐니 
+- Constants에 HISTORY_STATUS_ONE... 이게 뭐니
+
+
+
+
+
+- domain(회사별), xxx,yyy에 따라 다른 서비스를 제공해야 할 수도 있다. 이를 다르게 동적으로 정할 수 있도록!
+
 
 =====================================
 <proxy_registrar>
@@ -40,7 +60,6 @@
   -> AoR, useragent, callid를 이용하여 해당 계정의 비밀번호를 가져온다.
   -> 비밀번호가 있으면 비밀번호를, 없으면 null을 반환한다.
   -> 반환 결과가 null이 아니면 인증 성공으로 한다.
-  ->
 
 - 매번 invite때마다 device list를 가져오기 위해서 rest를 요청하는데, 이를 varnish cache를 이용해서 빠르게 하기.
 - rest call 이후 response를 받은 다음에 condition을 바꾸지 않고 미리 바꾼다.

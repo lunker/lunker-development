@@ -1,0 +1,2 @@
+- https://groups.google.com/forum/#!topic/kurento/--iHM9KbV8s
+-> kurento webrtcendpoint has no plan to rengotiated with updated endpoint 

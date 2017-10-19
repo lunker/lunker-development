@@ -68,14 +68,11 @@ J2EE 설계와 개발, 정보문화사
 - 소프트웨어 품질관리 (nhn은 이렇게한다)
 - java8 in action
 
-
 ## Algorithm
 -
 
 ## 함수형 프로그래밍
 -
-
-
 
 ## 참고 링크   
 - http://pr0gr4m.tistory.com/2

@@ -25,13 +25,17 @@
     - callid,
 
   - invoke <CallBean> CommunicationEvent.Type.INITIALIZATION
+  - typhone 유저간에 발생한 call이면,
   - invite에 대한 response를 만든다.
-    - 403 forbidden
+    - <REST> INITIALIZATION을 통해 callee or caller 관련 정보를 가져온다.
+    - invalid user이면, 403 forbidden
     - 404 not found
     -> call_ended state로 변경 후 콜 종료.
+
+  - <REST> INITIALIZATION를 통해 '통화중 여부'를 체크한다.
   - invite에 대한 response를 만든다.
     - 600 busy everywhere 발행
-    - invoke CommunicationEvent.Type.BUSY
+    - invoke CommunicationEvent.Type.BUSY // add call busy history
     - invoke CommunicationEvent.Type.PUSH_BUSY
     -> call_ended state로 변경 후 콜 종료.
 
