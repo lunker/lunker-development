@@ -76,3 +76,12 @@
 - pattern, gof pattern,
 - 객체지향 5원칙(solid)
 - 멀티 스레드, 멀티 코어 프로그래밍..!
+
+
+
+
+### Architecture
+- reverse proxy
+- memory swap
+- 빌드 및 배포 자동화
+- 테스트 자동화

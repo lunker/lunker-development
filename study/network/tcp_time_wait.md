@@ -28,3 +28,4 @@
 
 **참고**
 - http://sunyzero.tistory.com/198
+- 카카오 기술 블로그 http://tech.kakao.com/2016/04/21/closewait-timewait/

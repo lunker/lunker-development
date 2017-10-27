@@ -8,11 +8,19 @@
 - rfc 2327
   - sdp의 c=IN IP4 0.0.0.0
 
+
 - rfc 3264
   - sdp에 a=sendonly
 
+
 - rfc 3264 - inactive
   - sdp의 a=inactive
+
+
+
+- nortel
+  0.0.0.0
+  a=sendonly
 
 # IP-Phone
 - keepalive는 uas (callee)에서 invite로 발행한다.
