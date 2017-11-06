@@ -44,3 +44,7 @@
 
 [deep doubt(깊은 의심)]
 - 값이 없는 상황, null을 해결 하기 위함.
+
+
+
+[loose coupling]
