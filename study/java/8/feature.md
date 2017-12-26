@@ -1,8 +1,5 @@
 # Java 8에 새롭게 추가된 특징들
 
-
-
-
 ## Lambda
 - anomymous function
 - 코드 간결

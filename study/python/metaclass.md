@@ -11,7 +11,7 @@
 
 - 메타클래스의 주 목적은 클래스가 만들어질 때 클래스를 자동으로 바꾸기 위함이다.
 - 메타클래스를 정의하면, 모듈 내에 있는 모든 클래스의 생성에 영향을 미친다.
-- 
+-
 
 
 
@@ -24,3 +24,5 @@
 
 # Ref
 - https://code.tutsplus.com/ko/tutorials/quick-tip-what-is-a-metaclass-in-python--cms-26016
+-
+https://tech.ssut.me/2017/03/24/understanding-python-metaclasses/

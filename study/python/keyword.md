@@ -6,4 +6,6 @@
 - double underscore
 - built-in method, magic method, dunder method
 - with, context manager
-- 
+- docstring
+- autoenv, 폴더에 따른 개발환경 관리하기
+- future

@@ -1,5 +1,6 @@
 # Java 8
 
+
 ## default method, static method  
 - interface에 method를 구현할 수 있다.  
 - default accessor로 method를 구현하면, 해당 interface를 구현한 모든 클래스에서는 default method를 사용할 수 있다.  
