@@ -1,0 +1,3 @@
+- 합의 알고리즘
+- proof of work
+- 
