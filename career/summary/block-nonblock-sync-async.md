@@ -66,4 +66,5 @@ Sync와 Async는 I/O 완료 이벤트 통지하는 방법이다.
 
 * 관련 내용 정리 
 - http://sjh836.tistory.com/109
+- http://brainbackdoor.tistory.com/26
 

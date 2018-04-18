@@ -1,0 +1,116 @@
+{\rtf1\ansi\ansicpg949\cocoartf1504\cocoasubrtf830
+{\fonttbl\f0\fnil\fcharset129 AppleSDGothicNeo-Regular;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww19580\viewh15220\viewkind0
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f0\b\fs36 \cf0 Tomcat, Servlet, Container \'bf\'a1 \'b0\'fc\'c7\'cf\'bf\'a9 
+\b0\fs26 \
+\
+\
+- Servlet\'c0\'ba Container\'bf\'a1 \'c0\'c7\'c7\'d8\'bc\'ad \'bd\'c7\'c7\'e0\'b5\'c7\'b0\'ed, \'b0\'fc\'b8\'ae\'b5\'c8\'b4\'d9 \
+- Servlet\'c0\'ba \'bf\'dc\'ba\'ce \'bf\'e4\'c3\'d1\'b8\'b6\'b4\'d9 \'c7\'c1\'b7\'ce\'bc\'bc\'bd\'ba\'ba\'b8\'b4\'d9 \'b0\'a1\'ba\'ad\'bf\'ee \'bd\'ba\'b7\'b9\'b5\'e5\'b7\'ce \'c0\'c0\'b4\'e4\
+\
+\
+- Request\'b0\'a1 \'b5\'e9\'be\'ee\'bf\'c0\'b8\'e9 Servlet Container\'b0\'a1 \'c1\'f7\'c1\'a2 \'be\'b2\'b7\'b9\'b5\'e5\'b8\'a6 \'bb\'fd\'bc\'ba\'c7\'d1\'b4\'d9.\
+  \'b1\'d7\'b8\'ae\'b0\'ed \'c0\'cc \'be\'b2\'b7\'b9\'b5\'e5\'b0\'a1 Servlet Instance\'c0\'c7 service()\'b8\'a6 \'bc\'f6\'c7\'e0\'bd\'c3\'c5\'b2\'b4\'d9 \
+\
+- Servlet\'c0\'ba \'bb\'fd\'bc\'ba\'c1\'d6\'b1\'e2\'bf\'a1 \'b4\'eb\'c7\'d1 \'b1\'d4\'b0\'dd\'b8\'b8 \'c0\'d6\'b0\'ed, \'bd\'c7\'c1\'a6 \'b1\'b8\'c7\'f6\'c0\'ba \'bc\'ad\'ba\'ed\'b8\'b4 \'c4\'c1\'c5\'d7\'c0\'cc\'b3\'ca \'c1\'a6\'c0\'db\'c0\'da\'b5\'e9\'c0\'cc \'c7\'cf\'b1\'e2 \'b6\'a7\'b9\'ae\'bf\'a1\
+Servlet Container\'c0\'c7 \'c1\'be\'b7\'f9\'bf\'a1 \'b5\'fb\'b6\'f3 \'c1\'b6\'b1\'dd\'be\'bf \'c2\'f7\'c0\'cc\'b0\'a1 \'c1\'b8\'c0\'e7\'c7\'d1\'b4\'d9 \
+\
+\
+- Tomcat\'c0\'cc \'b1\'b8\'b5\'bf\'b5\'c7\'b8\'e9 JVM\'c0\'cc \'b1\'b8\'b5\'bf\'b5\'c7\'be\'ee \'c0\'da\'b9\'d9 \'b0\'fc\'b7\'c3 \'c3\'b3\'b8\'ae\'b8\'a6 \'c7\'d2 \'bc\'f6 \'c0\'d6\'b4\'d9. \
+\
+\
+\
+\
+\
+\
+\
+
+\b\fs30 Servlet Container
+\b0\fs26 \
+- Http \'bf\'e4\'c3\'bb\'c0\'bb \'b9\'de\'be\'c6\'bc\'ad Servlet\'c0\'bb \'bd\'c7\'c7\'e0\'c7\'cf\'b0\'ed, \'bb\'fd\'b8\'ed\'c1\'d6\'b1\'e2\'b8\'a6 \'b0\'fc\'b8\'ae\'c7\'cf\'b4\'c2 \'bf\'aa\'c7\'d2\'c0\'bb \'c7\'d1\'b4\'d9. \
+- Http \'bf\'e4\'c3\'bb\'bf\'a1 \'b5\'fb\'b6\'f3 \'be\'ee\'b4\'c0 Servlet\'bf\'a1 \'b4\'eb\'c7\'d1 \'bf\'e4\'c3\'bb\'c0\'ce\'c1\'f6 \'c3\'a3\'b4\'c2\'b4\'d9.(DD\'b8\'a6 \'c2\'fc\'c1\'b6\'c7\'d8\'bc\'ad \'c3\'a3\'c0\'bd) \
+- \'b8\'b8\'be\'e0 \'c7\'d8\'b4\'e7 Servlet\'c0\'cc Container\'bf\'a1\'bc\'ad \'c7\'d1\'b9\'f8\'b5\'b5 \'bd\'c7\'c7\'e0\'b5\'c8 \'c0\'fb\'c0\'cc \'be\'f8\'b0\'c5\'b3\'aa, \'b8\'de\'b8\'f0\'b8\'ae\'bf\'a1 \'c1\'b8\'c0\'e7\'c7\'cf\'c1\'f6 \'be\'ca\'c0\'b8\'b8\'e9 \'c7\'d8\'b4\'e7 Servlet Instance\'b8\'a6 \'bb\'f5\'b7\'d3\'b0\'d4 \'bb\'fd\'bc\'ba\'c7\'cf\'b0\'ed \'b8\'de\'b8\'f0\'b8\'ae\'bf\'a1 \'b7\'ce\'b5\'e5\'bd\'c3\'c5\'b2\'b4\'d9.\
+- \'b8\'de\'b8\'f0\'b8\'ae\'bf\'a1 Servlet Instance\'b0\'a1 \'c1\'b8\'c0\'e7\'c7\'cf\'b8\'e9 \'be\'b2\'b7\'b9\'b5\'e5\'b8\'a6 \'bb\'fd\'bc\'ba\'c7\'cf\'bf\'a9 \'c7\'d8\'b4\'e7 Instance\'c0\'c7 service()\'b8\'a6 \'c8\'a3\'c3\'e2\'c7\'d1\'b4\'d9 \
+\
+\
+
+\b DD(Deploy Description) : \'a1\'aeweb.xml\'a1\'af
+\b0 \
+- WEB-INF\'bf\'a1 \'c1\'b8\'c0\'e7\'c7\'d1\'b4\'d9.\
+- Servlet, Listener, Filter \'b5\'ee WebApplication \'bc\'b3\'c1\'a4 \'b0\'fc\'b7\'c3 \'c6\'c4\'c0\'cf.\
+\
+\
+
+\b ServletContext
+\b0 \
+- Servlet Container\'b0\'a1 \'bd\'c3\'c0\'db\'b5\'c7\'b8\'e9, \'c7\'d8\'b4\'e7 Container\'b4\'c2 \'b8\'f0\'b5\'e7 Web Application\'c0\'bb \'b9\'e8\'c6\'f7\'c7\'cf\'b0\'ed Load\'c7\'d1\'b4\'d9. \
+- \'c0\'cc\'b6\'a7 Web Application\'c0\'cc \'b7\'ce\'b5\'e5\'b5\'c7\'b8\'e9, \'c7\'d8\'b4\'e7 Web Application\'bf\'a1\'b8\'b8 \'a1\'aeServletContext\'a1\'af\'b8\'a6 \'bb\'fd\'bc\'ba\'c7\'cf\'b0\'ed, \'c0\'cc\'b8\'a6 \'b8\'de\'b8\'f0\'b8\'ae\'bf\'a1 \'ba\'b8\'b0\'fc\'c7\'d1\'b4\'d9.\
+- \'c0\'cc\'c8\'c4 web.xml\'c0\'bb \'c6\'c4\'bd\'cc\'c7\'cf\'bf\'a9 \'bb\'e7\'bf\'eb\'b5\'c9 \'c5\'ac\'b7\'a1\'bd\'ba\'b5\'e9\'c0\'c7 \'c0\'ce\'bd\'ba\'c5\'cf\'bd\'ba\'b8\'a6 \'bb\'fd\'bc\'ba\'c7\'cf\'b0\'ed \'bc\'ad\'b9\'f6 \'b8\'de\'b8\'f0\'b8\'ae\'bf\'a1 \'ba\'b8\'b0\'fc\'c7\'d1\'b4\'d9. \
+- =Servlet\'c0\'cc ServletContainer\'bf\'cd \'c5\'eb\'bd\'c5\'c7\'cf\'b1\'e2 \'c0\'a7\'c7\'d8 \'bb\'e7\'bf\'eb\'b5\'c7\'b4\'c2 \'b8\'de\'bc\'ad\'b5\'e5\'b5\'e9\'c0\'bb \'c1\'f6\'bf\'f8\'c7\'cf\'b4\'c2 \'c0\'ce\'c5\'cd\'c6\'e4\'c0\'cc\'bd\'ba \
+\
+
+\b HttpSession 
+\b0 \
+- Web Browser\'bf\'a1\'bc\'ad \'c3\'b3\'c0\'bd\'c0\'b8\'b7\'ce WebApplication\'c0\'bb \'b9\'e6\'b9\'ae\'c7\'cf\'b0\'c5\'b3\'aa, request.getSession()\'c0\'bb \'c3\'b3\'c0\'bd \'bc\'f6\'c7\'e0\'c7\'cf\'b8\'e9, Servlet Container\'b4\'c2 \'bb\'f5\'b7\'ce\'bf\'ee HttpSession \'b0\'b4\'c3\'bc\'b8\'a6 \'bb\'fd\'bc\'ba\'c7\'cf\'b0\'ed unique Id\'b8\'a6 \'bb\'fd\'bc\'ba\'c7\'d1 \'c8\'c4 \
+\'bc\'ad\'b9\'f6\'c0\'c7 \'b8\'de\'b8\'f0\'b8\'ae\'bf\'a1 \'c0\'fa\'c0\'e5\'c7\'d1\'b4\'d9\
+- \'b1\'d7\'b8\'ae\'b0\'ed \'c7\'d8\'b4\'e7 session\'bf\'a1 \'b0\'fc\'c7\'d1 \'c1\'a4\'ba\'b8\'b8\'a6 \'b0\'fc\'b8\'ae\'c7\'cf\'b1\'e2 \'c0\'a7\'c7\'cf\'bf\'a9 Servlet Container\'b0\'a1 \'a1\'aeJSESSIONID\'a1\'af\'b6\'f5 \'c0\'cc\'b8\'a7\'c0\'c7 key\'b7\'ce Http Response\'c0\'c7 \'a1\'aeSet-Cookkie Header\'a1\'af\'b7\'ce \'bc\'b3\'c1\'a4\'c7\'d1\'b4\'d9.\
+- \'c0\'cc\'c8\'c4 Web Browser\'bf\'a1\'bc\'ad \'b9\'df\'bb\'fd\'c7\'cf\'b4\'c2 Request\'b5\'e9\'c0\'c7 Header\'bf\'a1 \'a1\'aeJSESSIONID\'a1\'af\'b6\'f5 \'b0\'aa\'c0\'b8\'b7\'ce session id\'b0\'a1 \'b5\'e9\'be\'ee\'c0\'d6\'b0\'d4 \'b5\'c8\'b4\'d9. \
+\
+\
+\
+\
+\
+\
+\
+\
+
+\b\fs30 Tomcat Connector
+\b0\fs26 \
+\
+\
+WebServer -> WebApplicationServer\
+\
+\
+\
+\
+* BIO \
+- \
+\
+\
+* NIO \
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\'b8\'d6\'c6\'bc \'be\'b2\'b7\'b9\'b5\'e5 vs Event Driven \
+\
+\
+\
+\
+\
+\
+\uc0\u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212 \u8212  \
+\
+\
+\'a1\'aeweb server \'b9\'d7 \'be\'ee\'c7\'c3\'b8\'ae\'c4\'c9\'c0\'cc\'bc\'c7\'c0\'c7 \'c0\'cc\'c7\'d8\'bf\'cd tomcat\'c0\'c7 \'b1\'b8\'c1\'b6\'a1\'af \
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+{\field{\*\fldinst{HYPERLINK "http://jang8584.tistory.com/72"}}{\fldrslt \cf0 http://jang8584.tistory.com/72}}\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+\cf0 \
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\tx7864\pardirnatural\partightenfactor0
+\cf0 \
+{\field{\*\fldinst{HYPERLINK "https://groups.google.com/forum/#!topic/ksug/cLTLVpYD6P4"}}{\fldrslt https://groups.google.com/forum/#!topic/ksug/cLTLVpYD6P4}}\
+\
+\
+\'a1\'aeServletContext, HttpSession\'c0\'c7 \'bb\'fd\'bc\'ba\'a1\'af\
+{\field{\*\fldinst{HYPERLINK "http://jojoldu.tistory.com/118"}}{\fldrslt http://jojoldu.tistory.com/118}}}
