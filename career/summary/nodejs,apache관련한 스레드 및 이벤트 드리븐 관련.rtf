@@ -1,0 +1,63 @@
+{\rtf1\ansi\ansicpg949\cocoartf1504\cocoasubrtf830
+{\fonttbl\f0\fswiss\fcharset0 Helvetica;\f1\fnil\fcharset129 AppleSDGothicNeo-Regular;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww10800\viewh8400\viewkind0
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f0\fs40 \cf0 NodeJS vs Apache \
+\
+
+\b Apache(aka. MultiThread) 
+\b0 \
+- 
+\f1 \'c0\'fc\'c5\'eb\'c0\'fb\'c0\'ce
+\f0  
+\f1 \'bc\'d2\'c4\'cf
+\f0  
+\f1 \'bc\'ad\'b9\'f6
+\f0  
+\f1 \'c7\'c1\'b7\'ce\'b1\'d7\'b7\'a5\'c0\'c7 \'b1\'b8\'c1\'b6\'b4\'c2 \'b0\'a2 \'bf\'e4\'c3\'bb\'bf\'a1 \'b4\'eb\'c7\'d8\'bc\'ad \'c0\'c0\'b4\'e4\'c0\'bb \'c3\'b3\'b8\'ae\'c7\'d2 \'b6\'a7 \'be\'b2\'b7\'b9\'b5\'e5 \'c7\'ae \'b1\'e2\'b9\'dd \'b8\'f0\'b5\'a8\'c0\'bb \'bb\'e7\'bf\'eb\'c7\'d1\'b4\'d9.\
+\'c0\'cc\'b4\'c2 \'c0\'cf\'b9\'dd\'c0\'fb\'c0\'b8\'b7\'ce os\'c0\'c7 \'c6\'c4\'c0\'cf & \'b3\'d7\'c6\'ae\'bf\'f6\'c5\'b7 I/O API\'b0\'a1 \'bf\'c0\'b7\'a3 \'bd\'c3\'b0\'a3 \'b0\'c9\'b8\'ae\'b4\'c2 \'c0\'db\'be\'f7\'c0\'cc\'b8\'e7, CPU\'b8\'a6 \'b8\'b9\'c0\'cc \'bd\'ac\'b0\'d4 \'c7\'cf\'b4\'c2 Blocking API\'c0\'ce\'b5\'a5\'bc\'ad \'c3\'e2\'b9\'df\'c7\'d1 \'b1\'b8\'c1\'b6\'c0\'cc\'b4\'d9. \
+\
+- \'be\'b2\'b7\'b9\'b5\'e5 \'c7\'ae \'b1\'e2\'b9\'dd \'b8\'f0\'b5\'a8\'c0\'c7 \'c7\'d9\'bd\'c9\'c0\'ba, CPU\'b0\'a1 \'bd\'ac\'b4\'c2 \'bd\'c3\'b0\'a3\'c0\'cc \'be\'f8\'b5\'b5\'b7\'cf \'bf\'ad\'bd\'c9\'c8\'f7 \'b5\'b9\'b8\'ae\'b4\'c2 \'b0\'cd. \'c1\'ef \'c6\'c4\'c0\'cf, \'b3\'d7\'c6\'ae\'bf\'f6\'c5\'a9 i/o\'bf\'a1\'bc\'ad cpu\'b0\'a1 \'c7\'cf\'b5\'e5\'bf\'fe\'be\'ee\'c0\'c7 \'c0\'c0\'b4\'e4\'c0\'bb \'b1\'e2\'b4\'d9\'b8\'ae\'b4\'c2 \'c0\'af\'c8\'c4\'bd\'c3\'b0\'a3\'bf\'a1\'b5\'b5 cpu\'b8\'a6 \'bb\'e7\'bf\'eb\'c7\'d2 \'bc\'f6 \'c0\'d6\'b5\'b5\'b7\'cf \'bf\'a9\'b7\'af \'be\'b2\'b7\'b9\'b5\'e5\'b8\'a6 \'bf\'ee\'bf\'b5\'c7\'cf\'b4\'c2 \'b0\'cd. \
+\
+- \'b5\'bf\'b1\'e2\'b9\'e6\'bd\'c4\'bf\'a1\'bc\'ad\'b4\'c2 \'c7\'cf\'b3\'aa\'c0\'c7 i/o\'b0\'a1\'c3\'b3\'b8\'ae\'b5\'c7\'b4\'c2 \'b5\'bf\'be\'c8 blocking\'b5\'c7\'b1\'e2 \'b6\'a7\'b9\'ae\'bf\'a1, \'c0\'cc\'b8\'a6 thread\'b7\'ce \'c3\'b3\'b8\'ae\'c7\'df\'b4\'d9. \
+\
+
+\b *\'c0\'e5\'c1\'a1
+\b0 \
+- \'b8\'d6\'c6\'bc\'be\'b2\'b7\'b9\'b5\'f9\'c0\'bb \'c5\'eb\'c7\'d8\'bc\'ad \'bc\'ad\'b9\'f6\'b4\'c2 \'c3\'d6\'b4\'eb\'c7\'d1 \'b8\'b9\'c0\'ba \'bf\'e4\'c3\'bb\'c0\'bb \'b5\'bf\'bd\'c3\'bf\'a1 \'c3\'b3\'b8\'ae\'c7\'d2 \'bc\'f6 \'c0\'d6\'b4\'d9\
+ \
+
+\b * \'b4\'dc\'c1\'a1
+\b0 \
+-  \'be\'b2\'b7\'b9\'b5\'e5 \'bb\'fd\'bc\'ba \'b9\'d7 \'c0\'fc\'c8\'af\'bf\'a1 \'c7\'ca\'bf\'e4\'c7\'d1 \'c0\'da\'bf\'f8\'c0\'cc \'ba\'f1\'bd\'ce\'b8\'e7, Blocking \'b0\'c9\'b8\'b0 \'be\'b2\'b7\'b9\'b5\'e5\'b4\'c2 \'b0\'e1\'b1\'b9 \'b4\'eb\'b1\'e2 \'bb\'f3\'c5\'c2\'bf\'a1 \'b3\'f5\'c0\'ce\'b4\'d9. \
+- \'b5\'bf\'b1\'e2\'c8\'ad\'bf\'a1 \'b0\'fc\'c7\'d1 \'b9\'ae\'c1\'a6\'b5\'b5 \'b9\'df\'bb\'fd\'c7\'d1\'b4\'d9. \
+- \'c5\'ac\'b6\'f3\'c0\'cc\'be\'f0\'c6\'ae\'c0\'c7 \'bf\'e4\'c3\'bb\'b8\'b6\'b4\'d9 Thread\'b0\'a1 \'b5\'b9\'b1\'e2 \'b6\'a7\'b9\'ae\'bf\'a1, \'b5\'bf\'bd\'c3 \'c1\'a2\'bc\'d3\'c0\'da \'bc\'f6\'b0\'a1 \'b8\'b9\'c0\'bb \'bc\'f6\'b7\'cf Thread\'b0\'a1 \'b8\'b9\'c0\'cc \'b9\'df\'bb\'fd\'c7\'d1\'b4\'d9\'b4\'c2 \'c0\'c7\'b9\'cc\'c0\'cc\'b8\'e7 \'b1\'d7\'b8\'b8\'c5\'ad \'b8\'de\'b8\'f0\'b8\'ae \'c0\'da\'bf\'f8\'b5\'b5 \'b8\'b9\'c0\'cc \'bc\'d2\'b8\'f0\'c7\'d1\'b4\'d9. \
+\
+
+\b NodeJS 
+\b0 \
+- \'c0\'cf\'b9\'dd\'c0\'fb\'c0\'b8\'b7\'ce \'bd\'cc\'b1\'db \'c7\'c1\'b7\'ce\'bc\'bc\'bd\'ba\'b7\'ce \'c0\'db\'b5\'bf\'c7\'d1\'b4\'d9. \'b4\'d9\'b8\'a5 WAS\'b5\'e9\'c0\'cc \'bd\'ba\'b7\'b9\'b5\'e5\'c7\'ae\'c0\'bb \'c0\'cc\'bf\'eb\'c7\'cf\'bf\'a9 \'c1\'a2\'bc\'f6\'b5\'c8 \'b0\'a2 \'bf\'e4\'c3\'bb\'bf\'a1 \'b4\'eb\'c7\'cf\'bf\'a9 \'b0\'b3\'ba\'b0 \'bd\'ba\'b7\'b9\'b5\'e5\'b8\'a6 \'c7\'d2\'b4\'e7\'c7\'cf\'b4\'c2 \'b4\'eb\'bd\'c5, NodeJS\'b4\'c2 \'bd\'cc\'b1\'db \'c7\'c1\'b7\'ce\'bc\'bc\'bd\'ba\'b0\'a1 \'b8\'f0\'b5\'e7 \'bf\'e4\'c3\'bb\'c0\'bb \'c1\'f7\'c1\'a2 \'c3\'b3\'b8\'ae\'c7\'d1\'b4\'d9. \
+- OS\'bf\'a1\'bc\'ad \'c1\'a6\'b0\'f8\'c7\'cf\'b4\'c2 \'ba\'f1\'b5\'bf\'b1\'e2 I/O API\'b8\'a6 \'bb\'e7\'bf\'eb\'c7\'d1\'b4\'d9\'b8\'e9, \'c0\'cc\'ba\'a5\'c6\'ae \'b1\'e2\'b9\'dd\'c0\'c7 \'bb\'f5\'b7\'ce\'bf\'ee \'b8\'f0\'b5\'a8\'c0\'bb \'bb\'fd\'b0\'a2\'c7\'d2 \'bc\'f6 \'c0\'d6\'b4\'d9. \
+\
+- NodeJS\'b4\'c2 i/o\'c0\'db\'be\'f7\'bd\'c3 \'b4\'dc\'c0\'cf\'c7\'d1 \'b8\'de\'c0\'ce \'be\'b2\'b7\'b9\'b5\'e5\'bf\'a1\'bc\'ad os\'c0\'c7 \'ba\'f1\'b5\'bf\'b1\'e2 i/o api\'b8\'a6 \'c8\'a3\'c3\'e2\'c7\'d1 \'b5\'da, \'c0\'cc\'ba\'a5\'c6\'ae \'bd\'c3\'bd\'ba\'c5\'db\'c0\'bb \'c5\'eb\'c7\'d8\'bc\'ad api\'c0\'c7 \'bd\'c7\'c7\'e0 \'b0\'e1\'b0\'fa\'b8\'a6 \'c4\'dd\'b9\'e9\'c0\'b8\'b7\'ce \'c3\'b3\'b8\'ae\'c7\'d1\'b4\'d9. \
+\
+- \'b4\'dc\'c0\'cf \'be\'b2\'b7\'b9\'b5\'e5\'b7\'ce \'c0\'db\'b5\'bf\'c7\'cf\'b1\'e2\'bf\'a1 \'ba\'b9\'c0\'e2\'c7\'d1 \'b8\'d6\'c6\'bc \'be\'b2\'b7\'b9\'b5\'f9\'c0\'bb \'b1\'b8\'c7\'f6 \'c7\'d2 \'c7\'ca\'bf\'e4\'b0\'a1 \'be\'f8\'c0\'b8\'b8\'e7, \'b8\'d6\'c6\'bc \'be\'b2\'b7\'b9\'b5\'f9 \'bc\'ad\'b9\'f6 \'b8\'f0\'b5\'a8\'bf\'a1 \'ba\'f1\'c7\'d8\'bc\'ad \'c1\'f8\'c0\'d4 \'c0\'e5\'ba\'ae\'c0\'cc \'b3\'b7\'b0\'ed \'bb\'fd\'bb\'ea\'bc\'ba\'c0\'cc \'b3\'f4\'b4\'d9. \
+\
+* \'c0\'e5\'c1\'a1 \
+\
+\
+\
+* \'b4\'dc\'c1\'a1 \
+- \'b8\'d6\'c6\'bc\'c4\'da\'be\'ee \'c8\'af\'b0\'e6\'bf\'a1\'bc\'ad \'c0\'fc\'c3\'bc cpu\'b8\'a6 \'bb\'e7\'bf\'eb\'c7\'cf\'c1\'f6 \'b8\'f8\'c7\'cf\'b4\'c2 \'b9\'ae\'c1\'a6  \
+- I/O\'b0\'a1 \'bc\'f6\'b9\'dd\'b5\'c7\'b4\'c2 \'c0\'db\'be\'f7\'c0\'cc\'b3\'aa \'c0\'cc\'ba\'a5\'c6\'ae\'b4\'c2 event loop\'bf\'a1\'bc\'ad \'c0\'db\'be\'f7\'c0\'bb \'c7\'d1\'b4\'d9. \
+\'c7\'cf\'c1\'f6\'b8\'b8 \'ba\'f1\'c1\'ee\'b4\'cf\'bd\'ba \'b7\'ce\'c1\'f7\'c0\'ba \'c7\'cf\'b3\'aa\'c0\'c7 \'bd\'ba\'b7\'b9\'b5\'e5\'bf\'a1\'bc\'ad \'bd\'c7\'c7\'e0\'c7\'d1\'b4\'d9.\
+\
+- event loop\'b0\'a1 single-thread\'c0\'cc\'b1\'e2\'bf\'a1, \'c7\'cf\'b3\'aa\'c0\'c7 \'c3\'b3\'b8\'ae\'c0\'db\'be\'f7\'c0\'cc \'bf\'c0\'b7\'a1 \'b0\'c9\'b8\'b0\'b4\'d9\'b8\'e9 \'c0\'fc\'c3\'bc \'bc\'ad\'b9\'f6 \'c3\'b3\'b8\'ae\'bf\'a1 \'bf\'b5\'c7\'e2\'c0\'bb \'c1\'d8\'b4\'d9. \
+- \'b1\'d7\'b7\'a1\'bc\'ad cpu\'b8\'a6 \'b8\'b9\'c0\'cc \'bc\'d2\'b8\'f0 \'c7\'d1\'b4\'d9\'b5\'e7\'c1\'f6, \'b4\'eb\'bf\'eb\'b7\'ae \'c6\'c4\'c0\'cf \'c3\'b3\'b8\'ae\'b8\'a6 \'c7\'cf\'b4\'c2 \'c0\'db\'be\'f7\'c0\'cc \'be\'c6\'b4\'cf\'b0\'ed, \'b4\'dc\'c0\'a7 \'c0\'db\'be\'f7\'c0\'cc \'c2\'aa\'c0\'ba \'b8\'de\'bd\'c3\'c2\'a1 \'be\'ee\'c7\'c3\'b8\'ae\'c4\'c9\'c0\'cc\'bc\'c7\'c0\'ba nodejs\'b0\'a1 \'ba\'fc\'b8\'a3\'b4\'d9. \
+\
+\
+\
+}
